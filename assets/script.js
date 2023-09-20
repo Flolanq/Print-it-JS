@@ -23,3 +23,7 @@ let arrowRight = document.querySelector("#banner .arrow_right")
 arrowLeft.addEventListener("click", function () {
 	console.log("Vous avez cliqué sur la flèche gauche")
 })
+
+arrowRight.addEventListener("click", function () {
+	console.log("Vous avez cliqué sur la flèche droite")
+})
