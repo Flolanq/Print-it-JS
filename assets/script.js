@@ -48,20 +48,3 @@ function carrouselUpdate (image, tagLine) {
 	tagLineSlide.innerHTML = tagLine;
 	imageSlide.src = "./assets/images/slideshow/"+image;
 }
-
-// création des bullet points
-
-for (let i = 0; i < slides.length; i++) { 
-	let icone = "<i class="fa-regular fa-circle fa-2x"></i>";
-	let bulletPoint = document.createElement("bulletPoint");
-	bulletPoint.innerHTML = icone;
-	dots.appendChild(bulletPoint);
-	}
-	
-// autre solution pour créer les bullet points
-	
-for (let i = 0; i < slides.length; i++) { 
-let iconHtml = 	`
-	<i class="fa-regular fa-circle fa-2x"></i>`;
-dots.innerHTML = iconHtml;
-}
