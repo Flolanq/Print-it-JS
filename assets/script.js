@@ -48,3 +48,12 @@ function carrouselUpdate (image, tagLine) {
 	tagLineSlide.innerHTML = tagLine;
 	imageSlide.src = "./assets/images/slideshow/"+image;
 }
+
+// cette fonction ne crée qu'un seul point !
+
+function creerBulletPoint () {
+	let html = `<div class="dot"></div>`;
+	dots.innerHTML = html;
+	};
+creerBulletPoint();
+	
