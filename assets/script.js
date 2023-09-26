@@ -6,20 +6,22 @@ const slides = [
 	{
 		"image":"slide2.jpg",
 		"tagLine":"Tirages haute définition grand format <span>pour vos bureaux et events</span>"
+
 	},
 	{
 		"image":"slide3.jpg",
 		"tagLine":"Grand choix de couleurs <span>de CMJN aux pantones</span>"
+
 	},
 	{
 		"image":"slide4.png",
 		"tagLine":"Autocollants <span>avec découpe laser sur mesure</span>"
+
 	}
 ]
 let indexSlideActive = 0;
 let arrowLeft = document.querySelector("#banner .arrow_left");
 let arrowRight = document.querySelector("#banner .arrow_right");
-let dots = document.querySelector("dots");
 
 arrowLeft.addEventListener("click", function () {
 	if (indexSlideActive == 0) { 
@@ -42,7 +44,7 @@ arrowRight.addEventListener("click", function () {
 
 });
 
-function carrouselUpdate (image, tagLine, bullet) {
+function carrouselUpdate (image, tagLine) {
 	let imageSlide = document.querySelector('#banner .banner-img');
 	let tagLineSlide = document.querySelector('#banner p');
 	tagLineSlide.innerHTML = tagLine;
