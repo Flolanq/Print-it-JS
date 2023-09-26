@@ -42,18 +42,28 @@ arrowRight.addEventListener("click", function () {
 
 });
 
-function carrouselUpdate (image, tagLine) {
+function carrouselUpdate (image, tagLine, bullet) {
 	let imageSlide = document.querySelector('#banner .banner-img');
 	let tagLineSlide = document.querySelector('#banner p');
 	tagLineSlide.innerHTML = tagLine;
 	imageSlide.src = "./assets/images/slideshow/"+image;
 }
 
-// cette fonction ne crée qu'un seul point !
 
-function creerBulletPoint () {
-	let html = `<div class="dot"></div>`;
-	dots.innerHTML = html;
-	};
-creerBulletPoint();
+
+document.addEventListener("DOMContentLoaded", function () {
+	const Points = document.querySelector('.dots');
+	
+	// Création des points en fonction du nombre d'éléments dans le carrousel
+	slides.forEach(function (slide, index) {
+	const Point = document.createElement('div');
+	Point.classList.add('dot');
+	
+	if (index === 0) {
+	Point.classList.add('dot_selected');
+	}
+	
+	Points.appendChild(Point);
+	});
+	});
 	
