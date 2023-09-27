@@ -44,7 +44,7 @@ arrowRight.addEventListener("click", function () {
 
 });
 
-function carrouselUpdate (image, tagLine) {
+function carrouselUpdate (image, tagLine, pointSlide) {
 	let imageSlide = document.querySelector('#banner .banner-img');
 	let tagLineSlide = document.querySelector('#banner p');
 	tagLineSlide.innerHTML = tagLine;
@@ -56,7 +56,7 @@ function carrouselUpdate (image, tagLine) {
 document.addEventListener("DOMContentLoaded", function () {
 	const Points = document.querySelector('.dots');
 	
-	// Création des points en fonction du nombre d'éléments dans le carrousel
+	// Création des points en fonction du nombre d'éléments dans le carrousel (Points = parent, Point = enfant)
 	slides.forEach(function (slide, index) {
 	const Point = document.createElement('div');
 	Point.classList.add('dot');
