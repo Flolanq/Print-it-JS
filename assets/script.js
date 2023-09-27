@@ -44,14 +44,20 @@ arrowRight.addEventListener("click", function () {
 
 });
 
-function carrouselUpdate (image, tagLine, pointSlide) {
+function carrouselUpdate (image, tagLine) {
 	let imageSlide = document.querySelector('#banner .banner-img');
 	let tagLineSlide = document.querySelector('#banner p');
+	let dotList = document.querySelectorAll('.dot');
+	dotList.forEach(function (dot) {
+		dot.classList.remove('dot_selected');
+	});
+	dotList[indexSlideActive].classList.add('dot_selected');
 	tagLineSlide.innerHTML = tagLine;
 	imageSlide.src = "./assets/images/slideshow/"+image;
 }
 
 
+// pas bien compris lignes 57, 61, 65 :
 
 document.addEventListener("DOMContentLoaded", function () {
 	const Points = document.querySelector('.dots');
@@ -62,10 +68,10 @@ document.addEventListener("DOMContentLoaded", function () {
 	Point.classList.add('dot');
 	
 	if (index === 0) {
-	Point.classList.add('dot_selected');
+		Point.classList.add('dot_selected');
 	}
 	
 	Points.appendChild(Point);
 	});
-	});
+});
 	
