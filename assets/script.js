@@ -48,28 +48,27 @@ function carrouselUpdate (image, tagLine) {
 	let imageSlide = document.querySelector('#banner .banner-img');
 	let tagLineSlide = document.querySelector('#banner p');
 	let dotList = document.querySelectorAll('.dot');
+	
 	dotList.forEach(function (dot) {
 		dot.classList.remove('dot_selected');
 	});
+	
 	dotList[indexSlideActive].classList.add('dot_selected');
 	tagLineSlide.innerHTML = tagLine;
 	imageSlide.src = "./assets/images/slideshow/"+image;
 }
-
-
-// pas bien compris lignes 57, 61, 65 :
 
 document.addEventListener("DOMContentLoaded", function () {
 	const Points = document.querySelector('.dots');
 	
 	// Création des points en fonction du nombre d'éléments dans le carrousel (Points = parent, Point = enfant)
 	slides.forEach(function (slide, index) {
-	const Point = document.createElement('div');
-	Point.classList.add('dot');
+		const Point = document.createElement('div');
+		Point.classList.add('dot');
 	
-	if (index === 0) {
-		Point.classList.add('dot_selected');
-	}
+		if (index === 0) {
+			Point.classList.add('dot_selected');
+		}
 	
 	Points.appendChild(Point);
 	});
